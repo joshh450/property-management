@@ -38,11 +38,20 @@ export class FormTextArea extends Component {
 
 export class FormButton extends Component {
     render() {
-        const { className, title, input, type, placeholder } = this.props;
+        const { className, title, input, type, placeholder, small, danger } = this.props;
+        var style = {};
+        if(danger) {
+            style = {
+                color: 'red'
+            }
+        }
         return (
-            <div className= {`${className} form-button`}>
+            <div className= {`${className} form-button ${small ? 'form-button-small' : 'form-button'}`}>
                 <button
-                className='form-button__button'
+                className={`
+                ${small ? 'form-button-small' : 'form-button'}__button
+                ${danger ? 'form-button-small__danger' : ''}
+                `}
                 type={type}
                 {...input}
                 >

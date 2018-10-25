@@ -12,6 +12,7 @@ class NewNewsletter extends Component {
         return (
             <div className='new-newsletter'>
                 <NewNewsletterForm onSubmit={(event) => this.onSubmit(event)}/>
+                
             </div>
         )
     }

@@ -12,7 +12,7 @@ class NewNewsletterForm extends Component {
 
     return (
       <form onSubmit={handleSubmit} className="new-newsletter-form">
-        <FormTitle className="new-newsletter-form__title" text="Title" />
+        <FormTitle className="new-newsletter-form__title" text="New Newsletter" />
         <Field
           className="new-newsletter-form__newsletter-title"
           placeholder="Newsletter Title"
@@ -30,6 +30,15 @@ class NewNewsletterForm extends Component {
           title="Newsletter Body"
           component={FormTextArea}
         />
+
+         <Field 
+                className='sign-in-form__submit'
+                small={true}
+                danger={true}
+                name='Submit' 
+                component={FormButton} 
+                name='Submit' 
+                title="Submit"/>
 
       </form>
     );
