@@ -1,18 +1,22 @@
-// Base
+// BASE
 @import 'variables';
 @import 'base';
 
-// Header
+// HEADER
 @import 'header-wrapper';
 
-// Auth
+// AUTH
 @import 'signup';
 @import 'signin';
 
-// 
+// HELPERS
 @import 'form-title';
 @import 'form-fields';
 @import 'text-link';
 
+// DASHBOARD
 @import 'dashboard';
 @import 'tab-nav';
+
+// NEWSLETTERS
+@import 'newsletter-grid';
