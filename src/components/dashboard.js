@@ -18,19 +18,30 @@ class Dashboard extends Component {
                     title: 'Requests',
                     active: false,
                     component: <h4>Hey There - Requests</h4>
-                }
+                },
             ]
         }
     }
 
     handleTabChange = (title) => {
-        console.log('clicked on tab', title);
+        const tabs = this.state.tabs;
+
+        tabs.map(tab => {
+            tab.active = false
+            if(tab.title ==title) {
+                tab.active = true
+            } else {
+                tab.active = false
+            }
+        })
+
+        this.setState({ tabs });
     }
 
   render() {
     return (
         <div className="dashboard">
-            <TabNav handleClick={(title) => this.handleTabChange(title)} tabs={this.state.tabs}/>
+            <TabNav handleClick={(title) => this.handleTabChange(title)}tabs={this.state.tabs}/>
         </div>
     )
   }
