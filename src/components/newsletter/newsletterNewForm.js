@@ -32,21 +32,21 @@ class NewNewsletterForm extends Component {
         />
 
          <Field 
-                className='new-newsletter-form__submit'
-                small={true}
-                danger={true}
-                name='Submit' 
-                component={FormButton} 
-                title="Submit"/>
+          className='new-newsletter-form__submit'
+          small={true}
+          danger={true}
+          name='Submit' 
+          component={FormButton} 
+          title="Submit"/>
 
          <Field 
-                className='new-newsletter-form__cancel'
-                small={true}
-                name='cancel'
-                type="button"
-                component={FormButton}  
-                title="Cancel"
-                onClick={this.props.onCancel}/>
+          className='new-newsletter-form__cancel'
+          small={true}
+          name='cancel'
+          type="button"
+          component={FormButton}  
+          title="Cancel"
+          onClick={this.props.onCancel}/>
 
         <Field
           className="new-newsletter-form__image"
