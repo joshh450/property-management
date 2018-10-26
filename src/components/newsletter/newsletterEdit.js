@@ -9,11 +9,16 @@ class EditNewsletter extends Component {
         //   // save new newsletter on the backend. perform a post request here.
         //   console.log('trying to submit to backend.');
         // } 
-        this.props.history.push('/dashboard')
+        this.props.history.push('/dashboard');
     }
 
     onCancel = () => {
-        this.props.history.push('/dashboard')
+        this.props.history.push('/dashboard');
+    }
+
+    componentDidMount() {
+        // this.props.fetchNewsletterWithid()
+        console.log(this.props.match.params.id);
     }
 
     render() {
