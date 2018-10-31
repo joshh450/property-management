@@ -5,11 +5,20 @@ import FormTitle from "../formTitle";
 import { FormInput, FormButton, FormTextArea, FormImage } from "../formFields";
 
 class NewNewsletterForm extends Component {
+  
   render() {
 
     const { handleSubmit, formTitle, newsletterToEdit } = this.props;
     
-    const { title, body, imageURL } = newsletterToEdit;
+    var title = null;
+    var body = null;
+    var imageURL = null;
+    if(newsletterToEdit) {
+      title = newsletterToEdit.title;
+      body = newsletterToEdit.body;
+      imageURL = newsletterToEdit.imageURL;
+
+    }
 
     return (
       <form onSubmit={handleSubmit} className="new-newsletter-form">
@@ -21,6 +30,7 @@ class NewNewsletterForm extends Component {
           type="text"
           title="Newsletter Title"
           component={FormInput}
+          editValue={title ? title : null}
         />
 
         <Field
@@ -30,6 +40,7 @@ class NewNewsletterForm extends Component {
           type="text"
           title="Newsletter Body"
           component={FormTextArea}
+          editValue={body ? body : null}
         />
 
          <Field 
@@ -56,6 +67,7 @@ class NewNewsletterForm extends Component {
           type="file"
           title="Image"
           component={FormImage}
+          imageURL={imageURL}
         /> 
 
       </form>
